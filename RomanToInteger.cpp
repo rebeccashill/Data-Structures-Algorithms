@@ -4,28 +4,29 @@ Approach:
   
 class Solution {
 public:
-    unordered_map<char,int> roman={{'I',1},{'V',5},{'X',10},{'L',50},{'C',100},{'D',500},{'M',1000}};
+    unordered_map<char,int> roman = {{'I',1},{'V',5},{'X',10},{'L',50},{'C',100},{'D',500},{'M',1000}};
     int romanToInt(string s) 
     {
-        int res=0,i=0;
-        while(i<s.length()-1)
+        int result = 0;
+        int i = 0;
+        while(i < s.length()-1)
         {
-            int a=roman[s[i]];
-            int b=roman[s[i+1]];
-            if(a<b)
+            int a = roman[s[i]];
+            int b = roman[s[i+1]];
+            if(a < b)
             {
-                res+=(b-a);
-                i+=2;
+                result += (b-a);
+                i += 2;
             }
             else
             {
-                res+=a;
+                result += a;
                 i++;  
             }
         }
-        if(i!=s.length())
+        if(i != s.length())
         {
-            res+=roman[s[i]];
+            result += roman[s[i]];
         }
-        return res;
+        return result;
     }
