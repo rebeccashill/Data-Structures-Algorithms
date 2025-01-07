@@ -16,7 +16,8 @@ public:
         for (int i = 0; i < s.length(); ++i) {
             dp[i][i] = true;
             for (int j = 0; j < i; ++j) {
-                if (s[j] == s[i] && (i - j <= 2 || dp[j + 1][i - 1])) {
+                /**checking for equivalency, checking if the length of the substring is more than 2**/
+                if (s[i] == s[j] && (i - j <= 2 || dp[j + 1][i - 1])) {
                     dp[j][i] = true;
                     if (i - j + 1 > max_len) {
                         max_len = i - j + 1;
