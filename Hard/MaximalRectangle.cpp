@@ -10,7 +10,7 @@ public:
     *  3. If the value at the given index in the matrix is 1, check if the maximum area is equal to the result of the BFS or more
     *     If the result of the BFS is more than the result of the maxArea, make the maxArea equal to the result of the bfs
     */
-    int maximalRectangle(vector<vector<char>>& matrix) {
+    int MaximalRectangle(vector<vector<char>>& matrix) {
         if(matrix.size() == 0) return 0;
         int m = matrix.size(), n = matrix[0].size(), maxArea = 0;
         for(int i = 0; i < m; i++)
