@@ -90,11 +90,14 @@ public:
     /*
      * backtrack
      * Parameters: address for the board, vector for result, row number, column number, numRows, numCol, pointer to TrieNode
-     * Check if the row exists,
+     * 1. Check if the row exists,
      * 		if the column exists,
      * 		if the row is more than the amount of rows,
      * 		if the column is more than the amount of columns,
      * 		if the pointer can't move any further
+     * 2. Create a temporary board
+     * 3. Set the row and column equal to 0
+     * 4. Enact backtrack on the last row, next row, last column, and last column
     */
     void backtrack(vector<vector<char>>& board, vector<string>& res, int r, int c, int numRows, int numCol, TrieNode* p){
         if(r < 0 || c < 0 || r > numRows || c > numCol || board[r][c] == '0'|| !p->next[board[r][c] - 'a']) return;
