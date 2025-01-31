@@ -9,18 +9,18 @@ public:
 
         if(dp[i][j] != -1) return dp[i][j];
 
-        bool is_first_char_match = false;
+        bool isCharMatch = false;
 
-        if(i < s.length() && (p[j] == s[i] || p[j] == '.')) is_first_char_match = true;
+        if(i < s.length() && (p[j] == s[i] || p[j] == '.')) isCharMatch = true;
 
         if(p[j+1] == '*'){
             bool not_take = solve(s, p, i, j+2);
-            bool take = is_first_char_match && solve(s, p, i+1, j);
+            bool take = isCharMatch && solve(s, p, i+1, j);
 
             return dp[i][j] = take || not_take;
         }
 
-        return dp[i][j] = is_first_char_match && solve(s, p, i+1, j+1);
+        return dp[i][j] = isCharMatch && solve(s, p, i+1, j+1);
     }
 
     bool isMatch(string s, string p) {
