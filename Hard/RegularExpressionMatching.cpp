@@ -1,3 +1,12 @@
+/* Regular Expression Matching
+* 1. Check if the strings are a match.
+*   Create a nested vector of both strings together. Initiate solve.
+* 2. Test the parameters.
+* 3. Create a boolean for checking if the first character is a match.
+*       Check if the two ints (i and j) are the same. If they are, set the boolean equal to true.
+* 4. Use recursion to find other values to use.
+* 5. Return the boolean value of the solution to the recursive call to solve.
+*/
 class Solution {
 public:
 
