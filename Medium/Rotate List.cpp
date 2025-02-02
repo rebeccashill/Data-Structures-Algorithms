@@ -23,27 +23,26 @@ public:
     }
 };
 
-
+/* 1. Create a pointer ListNode P
+   *  2. Set ListNode* p = the first ListNode
+   *  3. Loop through the temporary list
+   *       If the length is 0, return the first ListNode
+   *  4. Create slow and fast pointers
+   *  5. Initiate the movement of the fast pointer
+   *       Decrement k (which is set to the length of the list)
+   *       Slow is 1 listnode behind
+   *  6. Keep incrementing fast and slow until we reach the end of fast
+   *       This will switch everything around in the p list.
+   *  7. Set res = slow.next which is the second to last ListNode so it is effectively rotated
+   *  8. Reset the list to begin at the start and end after the slow pointer (because everything is switched)
+*/
  // Solution 2.
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
         // If the list does not exist or there's no listnode next, return the listnode
         if(!head || !head->next) return head;
-
-        /* 1. Create a pointer ListNode P
-        *  2. Set ListNode* p = the first ListNode
-        *  3. Loop through the temporary list
-        *       If the length is 0, return the first ListNode
-        *  4. Create slow and fast pointers
-        *  5. Initiate the movement of the fast pointer
-        *       Decrement k (which is set to the length of the list)
-        *       Slow is 1 listnode behind
-        *  6. Keep incrementing fast and slow until we reach the end of fast
-        *       This will switch everything around in the p list.
-        *  7. Set res = slow.next which is the second to last ListNode so it is effectively rotated
-        *  8. Reset the list to begin at the start and end after the slow pointer (because everything is switched)
-        */
+        
         int len = 0;
         ListNode* p = head;
         while(p) p = p->next, len++;
