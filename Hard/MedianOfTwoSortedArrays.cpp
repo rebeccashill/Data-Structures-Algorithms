@@ -1,3 +1,14 @@
+/* findMedianSortedArrays
+    Parameters: vector<int> &nums1, vector<int> &nums2
+        1. Initialize variables for size of nums1 and nums2.
+        2. Check to make sure nums2 is larger than nums1. This ensures the algorithm works efficiently.
+        3. Create a merged array of nums1 and nums2 using the size variables.
+        4. While the lower size variable is less than the higher size variable (which is set to nums1Size):
+            - Calculate the mid index for nums1 and nums2.
+            - Create pointers for the min values and the max values on each side using l1, l2, r1, and r2.
+            - Determine the values of the algorithms using a modified version of the 2 pointer technique.
+        5. Expand towards the right and left sides of nums1. The median can be found when we reach the center.
+*/
 class Solution {
 public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
