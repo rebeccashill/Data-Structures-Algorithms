@@ -3,6 +3,15 @@
 #include <algorithm>
 using namespace std;
 
+/* longestValidParentheses (Leetcode Solution)
+    Parameters: string s (string of parentheses)
+    Method: dynamic programming
+    1. Initialize variable for string size, max length, and dp vector.
+    2. Loop through the string.
+    3. If s[i] and s[i-1] is "()", append to the dp array. Else, do not.
+    4. Update max length.
+    5. Exit for loop and return max length.
+*/
 class Solution {
 public:
     int longestValidParentheses(string s) {
