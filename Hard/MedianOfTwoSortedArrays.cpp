@@ -1,5 +1,7 @@
 /* findMedianSortedArrays
     Parameters: vector<int> &nums1, vector<int> &nums2
+    Return type: Double
+    Method: Two pointers
         1. Initialize variables for size of nums1 and nums2.
         2. Check to make sure nums2 is larger than nums1. This ensures the algorithm works efficiently.
         3. Create a merged array of nums1 and nums2 using the size variables.
