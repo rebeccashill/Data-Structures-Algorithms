@@ -1,4 +1,4 @@
-/* Binary Tree Inorder Traversal
+/* Binary Tree Inorder Traversal (Runtime: 0ms (beats 100%), Memory: 10.67MB (beats 98.05%))
     Enact inorder traversal using recursion and DFS.
 */
 class Solution {
